@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
+use App\TypeProduct;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('admin.home');
+    }
+
+    public function showHome()
+    {
+        $cate=TypeProduct::all()->toArray();
+        $data=Product::all()->toArray();
+        return view('client.index',['data' => $data, 'cate' => $cate]);
+    }
+    public function shownav()
+    {
+                $product=Product::all()->toArray();
+        return view('client.nav',['product' => $product]);
     }
 }
