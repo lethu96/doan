@@ -36,6 +36,7 @@
                       <li><a href="{{ route('typeproduct') }}">Type Product</a></li>
                     </ul>
                   </li>
+                  <li><a a href="{{ route('report') }}"><i class="fa fa-desktop"></i> Report </span></a>
                   <li><a a href="{{ route('user') }}"><i class="fa fa-desktop"></i> User </span></a>
                   </li>
                   <li><a><i class="fa fa-bar-chart-o"></i>Acount </span></a>

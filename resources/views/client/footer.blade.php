@@ -171,7 +171,7 @@
                     <div class="modal-product">
                         <div class="product-images">
                             <div class="main-image images">
-                                <img alt="" id="img_view" src="">
+                                <img alt="" id="img_view" src="" style="object-fit: cover;">
                             </div>
                         </div>
                         <div class="product-info">

@@ -53,30 +53,33 @@ Route::post('/size/update','SizeController@update')->name('sizeupdate');
 Route::get('/size/create','SizeController@getStore');
 Route::post('/size/create','SizeController@store');
 
-Route::get('/color','ColorController@index')->name('color');
-Route::get('/color/destroy/{id}','ColorController@destroy');
-Route::get('/color/update/{id}','ColorController@show');
-Route::post('/color/update','ColorController@update')->name('colorupdate');
-Route::get('/color/create','ColorController@getStore');
-Route::post('/color/create','ColorController@store');
+Route::get('/color', 'ColorController@index')->name('color');
+Route::get('/color/destroy/{id}', 'ColorController@destroy');
+Route::get('/color/update/{id}', 'ColorController@show');
+Route::post('/color/update', 'ColorController@update')->name('colorupdate');
+Route::get('/color/create', 'ColorController@getStore');
+Route::post('/color/create', 'ColorController@store');
 
-Route::get('/product','ProductController@index')->name('product');
-Route::get('/product/destroy/{id}','ProductController@destroy');
-Route::get('/product/update/{id}','ProductController@show');
-Route::post('/product/update','ProductController@update')->name('productupdate');
-Route::get('/product/create','ProductController@getStore');
-Route::post('/product/create','ProductController@store');
+Route::get('/product', 'ProductController@index')->name('product');
+Route::get('/product/destroy/{id}', 'ProductController@destroy');
+Route::get('/product/update/{id}', 'ProductController@show');
+Route::post('/product/update', 'ProductController@update')->name('productupdate');
+Route::get('/product/create', 'ProductController@getStore');
+Route::post('/product/create', 'ProductController@store');
 
-Route::get('/bill','BillController@index')->name('bill');
-Route::get('/bill/destroy/{id}','BillController@destroy');
-Route::get('/bill/update/{id}','BillController@show');
-Route::post('/bill/update','BillController@update')->name('billupdate');
-Route::get('bill/create','BillController@getStore');
-Route::post('/bill/create','BillController@store');
+Route::get('/bill', 'BillController@index')->name('bill');
+Route::get('/bill/destroy/{id}', 'BillController@destroy');
+Route::get('/bill/update/{id}', 'BillController@show');
+Route::post('/bill/update', 'BillController@update')->name('billupdate');
+Route::get('bill/create', 'BillController@getStore');
+Route::post('/bill/create', 'BillController@store');
 
-Route::get('/comment','CommentController@index')->name('comment');
-Route::get('/comment/destroy/{id}','CommnetController@destroy');
+Route::get('/comment', 'CommentController@index')->name('comment');
+Route::get('/comment/destroy/{id}', 'CommnetController@destroy');
 
-Route::get('/phuotstyle','HomeController@showHome');
-Route::get('/topproduct','ProductController@productTop');
-Route::get('product/detail','ProductController@productDetail');
+Route::get('/phuotstyle', 'HomeController@showHome');
+Route::get('/topproduct', 'ProductController@productTop');
+Route::get('product/detail/{id}', 'HomeController@showDetail');
+Route::get('/typeproduct/{id}', 'HomeController@typeProduct');
+
+Route::get('/report', 'ReportController@overview')->name('report');

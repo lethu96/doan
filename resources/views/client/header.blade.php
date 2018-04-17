@@ -133,7 +133,7 @@
                                             </a>
                                             <ul class="category-items">
                                             @foreach($cate as $item)
-                                            <a href="{{asset('/company/destroy/').'/'.$item['id']}}" class="categoriesId">
+                                            <a href="{{asset('/typeproduct/').'/'.$item['id']}}" class="categoriesId">
                                                     <li class="menu-item electronic-item">
                                                         {{$item['name']}}
                                                     </li>
@@ -146,7 +146,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-xs-10">
+                    <div class="col-sm-6 col-xs-10" style="float: right;">
+                        <div class="input-group">
+                            <input type="text" placeholder="Search for..." style="   width: 100%; height: 47px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;">
+                            <span class="input-group-btn">
+                                <button class="btn btn-search" type="button" style="height: 47px;"><i class="fa fa-search fa-fw"></i> Search</button>
+                            </span>
+                        </div>
                     </div>
                     <div class="hidden-lg hidden-md hidden-sm col-xs-2">
                         <div class="mobile-cart-inner pull-right">
@@ -155,8 +169,11 @@
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
+
         <div class="slider-area-8">
             <!-- Slider Start -->
             <div class="slider-container">

@@ -114,7 +114,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Giày trouble maker',
             'title' => 'giày chuyên dụng đi phượt',
             'description' => ' chưa nghĩ ra => đang nghĩ => gì mà căng =',
-            'image' => '124354',
+            'image' => 'kang.jpg',
             'size_id' => '1',
             'color_id' => '1',
             'price' => 14000000,
@@ -127,7 +127,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Áo khoác bomber',
             'title' => 'Áo khoác bomber',
             'description' => ' Áo khoác bomber',
-            'image' => '124354',
+            'image' => 'kang.jpg',
             'size_id' => '1',
             'color_id' => '1',
             'price' => 14000000,
@@ -140,7 +140,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Quần TNF 2018',
             'title' => 'Quần TNF 2018',
             'description' => ' Quần TNF 2018',
-            'image' => '124354',
+            'image' => 'kang.jpg',
             'size_id' => '1',
             'color_id' => '1',
             'price' => 14000000,
@@ -153,7 +153,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Khăn rằn Campuchia',
             'title' => 'Khăn rằn Campuchia',
             'description' => ' Khăn rằn Campuchia',
-            'image' => '124354',
+            'image' => 'kang.jpg',
             'size_id' => '1',
             'color_id' => '1',
             'price' => 14000000,
@@ -166,13 +166,143 @@ class DatabaseSeeder extends Seeder
             'name' => 'Mũ bảo hiểm fullface royal trơn 2018',
             'title' => 'Mũ bảo hiểm fullface royal trơn 2018',
             'description' => ' Mũ bảo hiểm fullface royal trơn 2018',
-            'image' => '124354',
+            'image' => 'kang.jpg',
             'size_id' => '1',
             'color_id' => '1',
             'price' => 14000000,
             'sum' => 10,
         ]);
 
+        DB::table('product')->insert([
+            'type_id' => 2,
+            'company_id' => 1,
+            'name' => 'Giày trouble maker',
+            'title' => 'giày chuyên dụng đi phượt',
+            'description' => ' chưa nghĩ ra => đang nghĩ => gì mà căng =',
+            'image' => '01-1492130666479.jpg',
+            'size_id' => '1',
+            'color_id' => '1',
+            'price' => 14000000,
+            'sum' => 10,
+        ]);
+
+        DB::table('product')->insert([
+            'type_id' => 2,
+            'company_id' => 1,
+            'name' => 'Áo khoác bomber',
+            'title' => 'Áo khoác bomber',
+            'description' => ' Áo khoác bomber',
+            'image' => '01-1492130666479.jpg',
+            'size_id' => '1',
+            'color_id' => '1',
+            'price' => 14000000,
+            'sum' => 10,
+        ]);
+
+        DB::table('product')->insert([
+            'type_id' => 2,
+            'company_id' => 1,
+            'name' => 'Quần TNF 2018',
+            'title' => 'Quần TNF 2018',
+            'description' => ' Quần TNF 2018',
+            'image' => '01-1492130666479.jpg',
+            'size_id' => '1',
+            'color_id' => '1',
+            'price' => 14000000,
+            'sum' => 10,
+        ]);
+
+        DB::table('product')->insert([
+            'type_id' => 2,
+            'company_id' => 1,
+            'name' => 'Khăn rằn Campuchia',
+            'title' => 'Khăn rằn Campuchia',
+            'description' => ' Khăn rằn Campuchia',
+            'image' => '01-1492130666479.jpg',
+            'size_id' => '1',
+            'color_id' => '1',
+            'price' => 14000000,
+            'sum' => 10,
+        ]);
+
+        DB::table('product')->insert([
+            'type_id' => 2,
+            'company_id' => 1,
+            'name' => 'Mũ bảo hiểm fullface royal trơn 2018',
+            'title' => 'Mũ bảo hiểm fullface royal trơn 2018',
+            'description' => ' Mũ bảo hiểm fullface royal trơn 2018',
+            'image' => '01-1492130666479.jpg',
+            'size_id' => '1',
+            'color_id' => '1',
+            'price' => 14000000,
+            'sum' => 10,
+        ]);
+
+
+        DB::table('product')->insert([
+            'type_id' => 3,
+            'company_id' => 1,
+            'name' => 'Giày trouble maker',
+            'title' => 'giày chuyên dụng đi phượt',
+            'description' => ' chưa nghĩ ra => đang nghĩ => gì mà căng =',
+            'image' => 'jk.png',
+            'size_id' => '1',
+            'color_id' => '1',
+            'price' => 14000000,
+            'sum' => 10,
+        ]);
+
+        DB::table('product')->insert([
+            'type_id' => 3,
+            'company_id' => 1,
+            'name' => 'Áo khoác bomber',
+            'title' => 'Áo khoác bomber',
+            'description' => ' Áo khoác bomber',
+            'image' => 'jk.png',
+            'size_id' => '1',
+            'color_id' => '1',
+            'price' => 14000000,
+            'sum' => 10,
+        ]);
+
+        DB::table('product')->insert([
+            'type_id' => 3,
+            'company_id' => 1,
+            'name' => 'Quần TNF 2018',
+            'title' => 'Quần TNF 2018',
+            'description' => ' Quần TNF 2018',
+            'image' => 'jk.png',
+            'size_id' => '1',
+            'color_id' => '1',
+            'price' => 14000000,
+            'sum' => 10,
+        ]);
+
+        DB::table('product')->insert([
+            'type_id' => 3,
+            'company_id' => 1,
+            'name' => 'Khăn rằn Campuchia',
+            'title' => 'Khăn rằn Campuchia',
+            'description' => ' Khăn rằn Campuchia',
+            'image' => 'jk.png',
+            'size_id' => '1',
+            'color_id' => '1',
+            'price' => 14000000,
+            'sum' => 10,
+        ]);
+
+        DB::table('product')->insert([
+            'type_id' => 3,
+            'company_id' => 1,
+            'name' => 'Mũ bảo hiểm fullface royal trơn 2018',
+            'title' => 'Mũ bảo hiểm fullface royal trơn 2018',
+            'description' => ' Mũ bảo hiểm fullface royal trơn 2018',
+            'image' => 'jk.png',
+            'size_id' => '1',
+            'color_id' => '1',
+            'price' => 14000000,
+            'sum' => 10,
+        ]);
         DB::table('comment_product')->insert([
             'comment_id' => 1,
             'product_id' => 1,

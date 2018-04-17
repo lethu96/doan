@@ -35,11 +35,11 @@
                         @foreach($data as $item)
                          <li>
                                 <a href="" class="thumbnail">
-                                    <img src="img/{{ $item['image'] }}" alt="">
+                                    <img src="/img/{{ $item['image'] }}" alt="" href="{{asset('/product/detail/').'/'.$item['id']}}">
                                 </a>
                                 <div class="content">
-                                    <a href="">{{$item['name']}}</a>
-                                    <span class="amount"> {{$item['price']}}</span>
+                                    <a href="{{asset('/product/detail/').'/'.$item['id']}}">{{$item['name']}}</a>
+                                    <span class="amount"> {{number_format($item['price'])}}</span>
                                 </div>
                             </li>
                         @endforeach
@@ -50,11 +50,11 @@
                         @foreach($data as $item)
                          <li>
                                 <a href="" class="thumbnail">
-                                    <img src="img/{{ $item['image'] }}" alt="">
+                                    <img href="{{asset('/product/detail/').'/'.$item['id']}}" src="/img/{{ $item['image'] }}" alt="">
                                 </a>
                                 <div class="content">
-                                    <a href="">{{$item['name']}}</a>
-                                    <span class="amount"> {{$item['price']}}</span>
+                                    <a href="{ {asset('/product/detail/').'/'.$item['id']}}" >{{$item['name']}}</a>
+                                    <span class="amount"> {{number_format($item['price'])}}</span>
                                 </div>
                             </li>
                         @endforeach
@@ -65,11 +65,11 @@
                         @foreach($data as $item)
                          <li>
                                 <a href="" class="thumbnail">
-                                    <img src="img/{{ $item['image'] }}" alt="">
+                                    <img src="/img/{{ $item['image'] }}" alt="" href="{{asset('/product/detail/').'/'.$item['id']}}">
                                 </a>
                                 <div class="content">
                                     <a href="">{{$item['name']}}</a>
-                                    <span class="amount"> {{$item['price']}}</span>
+                                    <span class="amount"> {{number_format($item['price'])}}</span>
                                 </div>
                             </li>
                         @endforeach
