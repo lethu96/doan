@@ -2,7 +2,7 @@
 <header class="header-area header-2 header-8">
     <div class="header-top">
         <div class="container">
-            <div class="row">
+<!--             <div class="row">
                 <div class="col-sm-6 hidden-xs">
                     <div class="header-top-left">
                         <ul>
@@ -28,7 +28,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="header-middle">
@@ -58,16 +58,67 @@
                                         <span class="menu-label">Trang Chủ</span>
                                     </a>
                                 </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="menu-label">Giỏ Hàng</span>
-                                        </a>
-                                    </li>
                                 <li>
                                     <a href="#">
                                         <span class="menu-label">Liên Hệ</span>
                                     </a>
                                 </li>
+                                <li class="dropdown">
+                                    <a  class="dropdown-toggle" data-toggle="dropdown"> <span class="glyphicon glyphicon-shopping-cart"><span class="badge">{!!Cart::count();!!}</span></span> Giỏ Hàng <b class="caret"></b></a>
+                                    <ul class="dropdown-menu" style="right:0; left: auto; min-width: 350px;">
+                                    @if(Cart::count() !=0)
+                                      <div class="table-responsive">
+                                         <table class="table table-hover" >
+                                          <thead>
+                                          <tr>
+                                            <th>Ảnh</th>
+                                            <th>LS</th>
+                                            <th>Tên <SPAN></SPAN></th>
+                                            <th>Giá</th>
+                                          </tr>
+                                        </thead>
+                                           <tbody>
+                                          @foreach(Cart::content() as $row)
+                                             <tr>
+                                               <td> {!!$row->images!!} <img class="card-img img-circle" src="{!!url('/images/'.$row->options->img)!!}" alt="dell"></td>
+                                               <td>{!!$row->qty!!}</td>
+                                               <td>{!!$row->name!!}</td>
+                                               <td>{!!$row->price!!} Vnd</td>
+                                             </tr>
+                                            @endforeach
+                                           </tbody>
+                                         </table> 
+                                         <a href="{!!url('/gio-hang/')!!}" type="button" class="btn btn-success"> Chi Tiết Giỏ Hàng </a>
+                                         <a href="{!!url('/gio-hang/xoa')!!}" type="button" class="btn btn-danger pull-right"> Xóa </a>
+                                      </div>
+                                      @else
+                                        <div class="table-responsive">
+                                         <table class="table table-hover" >
+                                          <thead>
+                                          <tr>
+                                            <th>Ảnh</th>
+                                            <th>LS</th>
+                                            <th>Tên <SPAN></SPAN></th>
+                                            <th>Giá</th>
+                                          </tr>
+                                        </thead>
+                                           <tbody>
+                                            <td colspan="3">Hện đang trống</td>
+                                           </tbody>
+                                         </table> 
+                                      </div>
+                                      @endif
+                                    </ul>
+                                  </li> 
+<!--                                 <li class="dropdown pull-right">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
+                                    <i class="fa fa-shopping-cart" style="font-size: 151%;"></i>
+                                        <span class="num-of-item" style="position: relative;border-radius: 4.4rem;min-width: 1.1rem;line-height: 1.2em;padding: 0 .5rem;text-align: center;height: 1.6rem;border: .2rem solid #f74d18;color: #ff5722;background-color: #fff;left: -0.8rem;top: -1.9rem;margin-right: -1.4rem;">02</span>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a ><i class="fa fa-btn fa-sign-out"></i>Thông tin</a></li>
+                                        <li><a ><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                    </ul>
+                                </li> -->
                             </ul>
                         </nav>
                     </div>
@@ -146,22 +197,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-xs-10" style="float: right;">
+<!--                     <div class="col-sm-9 col-xs-10" style="float: right;">
                         <div class="input-group">
-                            <input type="text" placeholder="Search for..." style="   width: 100%; height: 47px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;">
+                            <input type="hidden" name="_token" value="{{csrf_token()}}">
+                            <form action="search" method="post">
+                            <input type="text" placeholder="Search for..." style="   width: 100%; height: 47px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;background-color: #fff;background-image: none;border: 1px solid #ccc;border-radius: 4px;" name="keyword">
                             <span class="input-group-btn">
-                                <button class="btn btn-search" type="button" style="height: 47px;"><i class="fa fa-search fa-fw"></i> Search</button>
+                                <button class="btn btn-search" type="submit" style="height: 47px; background-color: #ed3c13" ><i class="fa fa-search fa-fw"></i> Search</button>
                             </span>
+                            </form>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="hidden-lg hidden-md hidden-sm col-xs-2">
                         <div class="mobile-cart-inner pull-right">
                             <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>

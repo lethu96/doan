@@ -83,3 +83,13 @@ Route::get('product/detail/{id}', 'HomeController@showDetail');
 Route::get('/typeproduct/{id}', 'HomeController@typeProduct');
 
 Route::get('/report', 'ReportController@overview')->name('report');
+
+Route::post('search','HomeController@search');
+Route::get('gio-hang', ['as' => 'getcart', 'uses' => 'PagesController@getcart']);
+Route::get('gio-hang/addcart/{id}', 'PagesController@addcart');
+Route::get('gio-hang/update/{id}/{qty}-{dk}', ['as' => 'getupdatecart', 'uses' => 'PagesController@getupdatecart']);
+Route::get('gio-hang/delete/{id}', ['as' => 'getdeletecart', 'uses' => 'PagesController@getdeletecart']);
+Route::get('gio-hang/xoa', ['as' => 'getempty', 'uses' => 'PagesController@xoa']);
+
+Route::get('dat-hang', ['as' => 'getoder', 'uses' => 'PagesController@getoder']);
+Route::post('dat-hang', ['as' => 'postoder', 'uses' => 'PagesController@postoder']);

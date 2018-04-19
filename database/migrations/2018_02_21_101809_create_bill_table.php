@@ -21,6 +21,8 @@ class CreateBillTable extends Migration
             $table->text('address_customer');
             $table->string('phone_customer');
             $table->string('amount');
+            $table->bigInteger('sum');
+            $table->string('type');
             $table->integer('status');
             $table->timestamps();
         });

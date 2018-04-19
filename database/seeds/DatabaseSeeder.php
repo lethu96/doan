@@ -316,6 +316,8 @@ class DatabaseSeeder extends Seeder
             'phone_customer' => '0978716823',
             'amount' => '121212',
             'status' => 1,
+            'sum' => 1,
+            'type' =>'cod'
         ]);
 
         DB::table('shipper_oder')->insert([
@@ -329,6 +331,7 @@ class DatabaseSeeder extends Seeder
             'product_id' => 1,
             'user_id' => 1,
             'status' => 1,
+            'qty' => 1,
         ]);
 
         DB::table('payment_log')->insert([

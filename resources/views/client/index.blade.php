@@ -18,7 +18,7 @@
                                 <div class="add-to-cart-list">
                                     <a class="btn-product btn-cart" href="#">
                                         <i aria-hidden="true" class="fa fa-shopping-cart Addcart" data-id="{{$item['id']}}"></i>
-                                    </a>
+                                    </a>""
                                 </div>
                             
                             <div class="product-button-group">
@@ -39,8 +39,7 @@
                         <span class="price">
                             <span class="amount" >{{number_format($item['price'])}} VND</span>
                         </span>
-                        
-                            <button type="button" class="btn btn-danger Addcart" ><i class="fa fa-shopping-cart" aria-hidden="true"></i> Thêm Vào giỏ Hàng</button>
+                            <button type="button" class="btn btn-danger Addcart" ><i class="fa fa-shopping-cart" aria-hidden="true"></i> <a  href="{!!url('gio-hang/addcart/'.$item->id)!!}"> Thêm Vào giỏ Hàng </a></button>
                         
                             <a href="{{asset('/product/detail/').'/'.$item['id']}}" title="" class="btn btn-danger">Xem chi tiết</a>
                         

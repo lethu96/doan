@@ -31,12 +31,8 @@
 <script src="{{asset('js/frontend/jquery-1.12.0.min.js')}}"></script>
 <style type="text/css">
     .btn-search {
-      background: #424242;
       border-radius: 0;
       color: #fff;
-      border-width: 1px;
-      border-style: solid;
-      border-color: #1c1c1c;
     }
     .btn-search:link, .btn-search:visited {
       color: #fff;
